@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/G6l1PGICLcy3EwVh6/ZfPZmSr3/pL7QQUm5Hbrjvlcw0NGddW3dj7vI0XghrY8PA797U7H3JXWMhFQxoxD6zQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Classes\\Class01\\Demo\\.NET - Core3.1\\SEDC.Core\\SEDC.Core.Web\\SEDC.Core.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aneta\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
+  ],
+  "logs": []
+}
