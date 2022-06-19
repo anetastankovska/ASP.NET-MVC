@@ -4,65 +4,65 @@ namespace BurgerApp
 {
     public class StaticDB
     {
-        //public static List<Burger> Burgers = new()
-        //{
-        //    new Burger 
-        //    {
-        //        Name = "Hamburger",
-        //        Price = 140,
-        //        IsVegeterian = false,
-        //        IsVegan = false,
-        //        HasFries = true
-        //    },
+        public static List<Burger> Burgers = new()
+        {
+            new Burger
+            {
+                Name = "Hamburger",
+                Price = 140,
+                IsVegeterian = false,
+                IsVegan = false,
+                HasFries = true
+            },
 
-        //    new Burger
-        //    {
-        //        Name = "Cheeseburger",
-        //        Price = 160,
-        //        IsVegeterian = false,
-        //        IsVegan = false,
-        //        HasFries = true
-        //    },
+            new Burger
+            {
+                Name = "Cheeseburger",
+                Price = 160,
+                IsVegeterian = false,
+                IsVegan = false,
+                HasFries = true
+            },
 
-        //    new Burger
-        //    {
-        //        Name = "Chickenburger",
-        //        Price = 150,
-        //        IsVegeterian = false,
-        //        IsVegan = false,
-        //        HasFries = true
-        //    },
+            new Burger
+            {
+                Name = "Chickenburger",
+                Price = 150,
+                IsVegeterian = false,
+                IsVegan = false,
+                HasFries = true
+            },
 
-        //    new Burger
-        //    {
-        //        Name = "Veggieburger",
-        //        Price = 190,
-        //        IsVegeterian = true,
-        //        IsVegan = false,
-        //        HasFries = true
-        //    },
+            new Burger
+            {
+                Name = "Veggieburger",
+                Price = 190,
+                IsVegeterian = true,
+                IsVegan = false,
+                HasFries = true
+            },
 
-        //    new Burger
-        //    {
-        //        Name = "Vegan Burger",
-        //        Price = 200,
-        //        IsVegeterian = true,
-        //        IsVegan = true,
-        //        HasFries = false
-        //    },
+            new Burger
+            {
+                Name = "Vegan Burger",
+                Price = 200,
+                IsVegeterian = true,
+                IsVegan = true,
+                HasFries = false
+            },
 
-        //    new Burger
-        //    {
-        //        Name = "Crispy Burger",
-        //        Price = 180,
-        //        IsVegeterian = false,
-        //        IsVegan = false,
-        //        HasFries = true
-        //    }
+            new Burger
+            {
+                Name = "Crispy Burger",
+                Price = 180,
+                IsVegeterian = false,
+                IsVegan = false,
+                HasFries = true
+            }
 
-        //};
+        };
 
-        public static List<Burger> Burgers { get; set; } = new List<Burger>();
+        //public static List<Burger> Burgers { get; set; } = new List<Burger>();
         public static List<Order> Orders { get; set; } = new List<Order>();
 
 

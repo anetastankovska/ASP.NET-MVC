@@ -16,6 +16,8 @@
             IsVegan = isVegan;
             HasFries = hasFries;
         }
+
+        public Burger() { }
     }
 }
 
