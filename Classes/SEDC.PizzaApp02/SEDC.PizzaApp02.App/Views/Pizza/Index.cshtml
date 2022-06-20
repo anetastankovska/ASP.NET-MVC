@@ -1,0 +1,12 @@
+﻿
+@model List<Pizza>
+
+
+<h2>Your first slice of pizza</h2>
+
+<p>Please select a pizza</p>
+
+@foreach (var pizza in Model)
+{
+    <p>@pizza.Name - @pizza.Price mkd</p>
+}
