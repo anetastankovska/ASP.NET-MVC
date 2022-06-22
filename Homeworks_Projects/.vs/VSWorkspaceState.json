@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BurgerApp",
+    "\\BurgerApp\\BurgerApp",
+    "\\BurgerApp\\BurgerApp\\BurgerApp",
+    "\\BurgerApp\\BurgerApp\\BurgerApp\\Models",
+    "\\BurgerApp\\BurgerApp\\BurgerApp\\Models\\Domain"
+  ],
+  "SelectedNode": "\\BurgerApp\\BurgerApp\\BurgerApp\\Models\\Domain\\Burger.cs",
+  "PreviewInSolutionExplorer": false
+}
