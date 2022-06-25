@@ -50,3 +50,5 @@ C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\obj\Debug\net6.0\scopedcss\projectbundle\SEDC.PizzaApp02.App.bundle.scp.css
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\obj\Debug\net6.0\SEDC.PizzaApp02.App.genruntimeconfig.cache
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\obj\Debug\net6.0\ref\SEDC.PizzaApp02.App.dll
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\obj\Debug\net6.0\SEDC.PizzaApp02.App.csproj.CopyComplete

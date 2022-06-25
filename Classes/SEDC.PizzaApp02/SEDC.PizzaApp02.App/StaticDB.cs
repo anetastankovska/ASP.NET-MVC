@@ -58,15 +58,17 @@ namespace SEDC.PizzaApp02.App
                 Id = 1,
                 User = Users.First(),
                 Pizza = Pizzas.Last(),
-                PaymentMethod = PaymentMethod.Card
+                PaymentMethod = PaymentMethod.Card,
+                IsDelivered = true
             },
 
             new Order
             {
-                Id = 1,
+                Id = 2,
                 User = Users.Last(),
                 Pizza = Pizzas.First(),
-                PaymentMethod = PaymentMethod.Cash
+                PaymentMethod = PaymentMethod.Cash,
+                IsDelivered = false
             },
         };
     }

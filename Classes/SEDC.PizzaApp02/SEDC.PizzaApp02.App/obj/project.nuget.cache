@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ysyWwIQySqca4lc6/xGFjgL8dqWIpRcbyeqFzTkPGY6gRFBd/w1tJUt+HZLqnM8/BFf8JTDVaSey3zbgdrDd2Q==",
+  "dgSpecHash": "9x0ocduajLGa+sZrSqN4Yycqlw8xzCdm+BVB2gbpAQJmLaChk5zt+9PlRAOMWQtzKB4PTVANzTlQTGo3gYCCOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Classes\\SEDC.PizzaApp02\\SEDC.PizzaApp02.App\\SEDC.PizzaApp02.App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Aneta\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Aneta\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

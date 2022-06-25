@@ -18,6 +18,14 @@ namespace SEDC.PizzaApp02.App.Controllers
 
             return View(orderListViewModel);
         }
+
+        public IActionResult Details(Order order)
+        {
+            OrderDetailsViewModel orderDetailsViewModel = order.MapOrderDetailsViewModel();
+
+            ViewData["Title"] = "Order details:";
+            return View(orderDetailsViewModel);
+        }
     }
     
 }

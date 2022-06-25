@@ -1,0 +1,15 @@
+﻿@model OrderDetailsViewModel
+
+<partial>name="~/Views/Shared/_OrderDetailsPartial.cshtml" for="OrderDetailsViewModel")</partial>
+<h2>@ViewData["Title"]</h2>
+<hr />
+<h4>Pizza name: @Model.PizzaName</h4>
+<h4>User full name: @Model.UserName</h4>
+<h4>Order payment method: @Model.PaymentMethod</h4>
+<h4>Price: @Model.Price USD</h4>
+@{if(Model.Delivered){
+    <h4>Your order has been delivered</h4>
+}}
+@{if(!Model.Delivered){
+    <h4>Your order has not been delivered yet.</h4>
+}}
