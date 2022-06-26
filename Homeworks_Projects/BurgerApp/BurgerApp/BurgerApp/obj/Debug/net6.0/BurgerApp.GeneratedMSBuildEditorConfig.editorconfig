@@ -11,7 +11,7 @@ build_property.RootNamespace = BurgerApp
 build_property.ProjectDir = C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Homeworks_Projects\BurgerApp\BurgerApp\BurgerApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Homeworks_Projects\BurgerApp\BurgerApp\BurgerApp
 build_property._RazorSourceGeneratorDebug = 
 
@@ -21,6 +21,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Order/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Homeworks_Projects/BurgerApp/BurgerApp/BurgerApp/Views/Shared/Error.cshtml]

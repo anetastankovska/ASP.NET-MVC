@@ -15,6 +15,7 @@ namespace BurgerApp.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Greet"] = "Bob's ultimate Burger service";
             return View();
         }
 
