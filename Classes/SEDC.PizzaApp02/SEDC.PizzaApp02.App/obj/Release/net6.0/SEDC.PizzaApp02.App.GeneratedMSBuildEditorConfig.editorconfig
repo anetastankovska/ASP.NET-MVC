@@ -11,7 +11,7 @@ build_property.RootNamespace = SEDC.PizzaApp02.App
 build_property.ProjectDir = C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\Classes\SEDC.PizzaApp02\SEDC.PizzaApp02.App
 build_property._RazorSourceGeneratorDebug = 
 

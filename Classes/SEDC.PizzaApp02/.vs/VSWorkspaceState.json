@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\SEDC.PizzaApp02.App",
+    "\\SEDC.PizzaApp02.App\\Controllers",
+    "\\SEDC.PizzaApp02.App\\Helpers",
     "\\SEDC.PizzaApp02.App\\Models",
     "\\SEDC.PizzaApp02.App\\Models\\Domain",
+    "\\SEDC.PizzaApp02.App\\Views",
+    "\\SEDC.PizzaApp02.App\\Views\\Order",
     "\\SEDC.PizzaApp02.App\\Views\\Shared"
   ],
-  "SelectedNode": "\\SEDC.PizzaApp02.App\\StaticDB.cs",
+  "SelectedNode": "\\SEDC.PizzaApp02.App\\Views\\Order\\OrderDetails.cshtml",
   "PreviewInSolutionExplorer": false
 }

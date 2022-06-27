@@ -1,4 +1,6 @@
-﻿using BurgerApp.Models.Domain;
+﻿using BurgerApp.Helpers.OrderHelpers;
+using BurgerApp.Models.Domain;
+using BurgerApp.Models.ViewModels.OrderViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerApp.Controllers
@@ -13,14 +15,20 @@ namespace BurgerApp.Controllers
 
         public IActionResult Orders()
         {
-            return View();
+            List<Order> ordersFromDB = StaticDB.Orders;
+            List<DetailsViewModel> allOrdersViewModel = ordersFromDB.Select(x => x.MapToOrderDetailsViewModel()).ToList();
+
+            ViewData["TotalOrders"] = $"We have total orders of {allOrdersViewModel.Count}";
+            ViewData["Title"] = "Orders list";
+
+            return View(allOrdersViewModel);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-
-            return View();
+            Order order = new Order();
+            return View(order);
         }
 
         [HttpPost]
@@ -35,16 +43,31 @@ namespace BurgerApp.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Edit(int Id)
+        [HttpPost]
+        public IActionResult Edit(Order order)
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var order = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+
+            }
+            return View();
+
+        }
+
         public IActionResult Details(Order order)
         {
-            return View();
+            DetailsViewModel detailsViewModel = order.MapToOrderDetailsViewModel();
+
+            ViewData["Title"] = "Orders details";
+
+            return View(detailsViewModel);
         }
     }
 }

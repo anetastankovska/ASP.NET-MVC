@@ -1,1 +1,61 @@
-﻿<h4>Create order</h4>
+﻿@model Order
+<form asp-controller="Order" asp-action="Create" method="post">
+    <label asp-for="FullName"></label>
+    <input asp-for="FullName" />
+    <br/>
+
+    <label asp-for="Address"></label>
+    <input asp-for="Address" />
+    <br />
+
+    <label asp-for="Location"></label>
+    <input asp-for="Location" />
+    <br/>
+    <br />
+    <label asp-for="Burgers"></label>
+    <br />
+    <input type="checkbox" name="Hamburger" value="Hamburger">
+    <label for="Hamburger">Hamburger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+
+    <input type="checkbox" name="Cheeseburger" value="Cheeseburger">
+    <label for="CheeseBurger">Cheeseburger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+
+    <input type="checkbox" name="Chickenburger" value="Chickenburger">
+    <label for="Chickenburger">Chickenburger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+
+    <input type="checkbox" name="Veggieburger" value="Veggieburger">
+    <label for="Veggieburger">Veggie Burger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+
+    <input type="checkbox" name="Vegan Burger" value="Vegan Burger">
+    <label for="Vegan Burger">Vegan Burger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+
+    <input type="checkbox" name="Crispy Burger" value="Crispy Burger">
+    <label for="Crispy Burger">Crispy Burger</label> 
+    <label for="Quantity">Quantity</label>
+    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
+    <br />
+    <br />
+
+    <label asp-for="PaymentMethod">Payment method:</label>
+    <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
+    </select>
+    <br/>
+    <br />
+
+    <button type="submit"> Submit </button>
+</form>
