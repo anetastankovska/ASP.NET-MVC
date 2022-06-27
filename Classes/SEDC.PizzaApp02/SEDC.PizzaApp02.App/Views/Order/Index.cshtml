@@ -2,16 +2,20 @@
 
     <h2>@ViewData["Title"]</h2>
 
-    @{
-        var count = 1;
-    }
-    @foreach (var order in Model)
-    {
-        <p>
-            <a asp-action="Details" asp-controller="Order" asp-route-id="@count">
+@{
+    int count = 1;
+}
+@foreach (var order in Model)
+{
+    <p>
+        <a asp-action="Details" asp-controller="Order" asp-route-id="@count">
             <span>@(count++). </span>
-            </a>@order.PizzaName | Ordered by: @order.UserFullName</p>
-    }
+        </a>@order.PizzaName | Ordered by: @order.UserFullName
+        <span> <a class=" btn btn-danger" asp-action="Delete" asp-route-id="@count">Delete</a></span>
+    </p>
+    @(count++);
+
+}
 
     <h4>@ViewData["Message"]</h4>
     <h5>@ViewData["FirstUser"]</h5>

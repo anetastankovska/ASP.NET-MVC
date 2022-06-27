@@ -61,9 +61,9 @@ namespace BurgerApp.Controllers
 
         }
 
-        public IActionResult Details(Order order)
+        public IActionResult Details(int? id)
         {
-            DetailsViewModel detailsViewModel = order.MapToOrderDetailsViewModel();
+            //DetailsViewModel detailsViewModel = order.MapToOrderDetailsViewModel();
 
             ViewData["Title"] = "Orders details";
 

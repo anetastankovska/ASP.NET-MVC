@@ -66,10 +66,42 @@ namespace SEDC.PizzaApp02.App.Controllers
 
             return View(orderViewModel);
         }
+
+        public IActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return new EmptyResult();
+            }
+
+            Order orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+            if(orderFromDb == null)
+            {
+                return View("ResourceNotFound");
+            }
+
+            OrderDetailsViewModel orderDetailsViewModel = orderFromDb.MapToOrderDetailsViewModel();
+
+            return View(orderDetailsViewModel);
+        }
+
+        public IActionResult ConfirmDelete(int? id)
+        {
+            Order orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+            if(orderFromDb == null)
+            {
+                return View("ResourceNotFound");
+            }
+            StaticDB.Orders.Remove(orderFromDb);
+            return RedirectToAction("Index");
+        }
     }
+
+
     //Create edit action for home,
     //add edit view model,
     //add view for editing orders,
     //don't forget to populate the users list so that it wil be displayed for editing
-    
+
+
 }
