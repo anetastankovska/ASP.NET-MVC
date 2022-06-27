@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SEDC.PizzaApp02.App.Helpers;
 using SEDC.PizzaApp02.App.Models.Domain;
 using SEDC.PizzaApp02.App.Models.ViewModels;
@@ -19,15 +20,56 @@ namespace SEDC.PizzaApp02.App.Controllers
             return View(orderListViewModel);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int? id)
         {
             ViewData["Title"] = "Order details:";
-
-            var order = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
-            if (order == null)
+            if(id == null)
+            {
+                return new EmptyResult();
+            }
+            var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+            if (orderFromDb == null)
+            {
                 return NotFound();
+            }
+
+            OrderDetailsViewModel orderDetailsViewModel = orderFromDb.MapToOrderDetailsViewModel();
+            return View(orderDetailsViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            ViewBag.Users = StaticDB.Users.Select(x => x.MapToUserSelectViewModel()).ToList();
+
+            //Another way
+            //var users = new SelectList(StaticDB.Users).Select(x => x.MapToUserSelectViewModel()).ToList();
+
+            OrderViewModel order = new OrderViewModel();
             return View(order);
         }
+
+        [HttpPost]
+        public IActionResult Create(OrderViewModel orderViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                orderViewModel.Id = StaticDB.Orders.Count() + 1;
+                Pizza pizzaFromDb = StaticDB.Pizzas.FirstOrDefault(x => x.Name.ToLower() == orderViewModel.PizzaName.ToLower());
+                if (pizzaFromDb == null)
+                {
+                    return View("ResourceNotFound");
+                }
+                StaticDB.Orders.Add(orderViewModel.MapToOrder());
+                return RedirectToAction("Index");
+            }
+
+            return View(orderViewModel);
+        }
     }
+    //Create edit action for home,
+    //add edit view model,
+    //add view for editing orders,
+    //don't forget to populate the users list so that it wil be displayed for editing
     
 }

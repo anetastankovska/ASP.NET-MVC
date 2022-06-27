@@ -15,10 +15,10 @@ var config = new MapperConfiguration(cfg =>
 
 cfg.CreateMap<Order, OrderDetailsViewModel>()
 .ForMember(dest => dest.PizzaName, act => act.MapFrom(Order => Order.Pizza.Name))
-.ForMember(dest => dest.UserName, act => act.MapFrom(Order => Order.User.FirstName))
+.ForMember(dest => dest.UserFullName, act => act.MapFrom(Order => Order.User.FirstName))
 .ForMember(dest => dest.PaymentMethod, act => act.MapFrom(Order => Order.PaymentMethod))
 .ForMember(dest => dest.Price, act => act.MapFrom(Order => Order.Pizza.Price))
-.ForMember(dest => dest.Delivered, act => act.MapFrom(Order => Order.IsDelivered))
+.ForMember(dest => dest.IsDelivered, act => act.MapFrom(Order => Order.IsDelivered))
 
 );
 

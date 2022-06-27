@@ -9,11 +9,25 @@ namespace SEDC.PizzaApp02.App.Helpers
         {
             return new OrderDetailsViewModel
             {
+                Id = order.Id,
                 PizzaName = order.Pizza.Name,
-                UserName = $"{order.User.FirstName} {order.User.LastName}",
+                UserFullName = $"{order.User.FirstName} {order.User.LastName}",
                 PaymentMethod = order.PaymentMethod,
                 Price = order.Pizza.Price,
-                Delivered = order.IsDelivered
+                IsDelivered = order.IsDelivered
+            };
+        }
+
+        public static OrderDetailsViewModel MapToOrderDetailsViewModel(this Order order)
+        {
+            return new OrderDetailsViewModel
+            {
+                Id = order.Id,
+                PizzaName = order.Pizza.Name,
+                UserFullName = $"{order.User.FirstName} {order.User.LastName}",
+                PaymentMethod = order.PaymentMethod,
+                Price = order.Pizza.IsOnPromotion ? 200 : order.Pizza.Price,
+                IsDelivered = order.IsDelivered
             };
         }
     }

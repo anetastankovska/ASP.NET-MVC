@@ -13,5 +13,16 @@ namespace SEDC.PizzaApp02.App.Helpers
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}"
             };
         }
+
+        public static Order MapToOrder(this OrderViewModel orderViewModel)
+        {
+            return new Order
+            {
+                Id = orderViewModel.Id,
+                PaymentMethod = orderViewModel.PaymentMethod,
+                User = StaticDB.Users.SingleOrDefault(x => x.Id == orderViewModel.UserId),
+                Pizza = StaticDB.Pizzas.FirstOrDefault(x => x.Name == orderViewModel.PizzaName)
+            };
+        }
     }
 }

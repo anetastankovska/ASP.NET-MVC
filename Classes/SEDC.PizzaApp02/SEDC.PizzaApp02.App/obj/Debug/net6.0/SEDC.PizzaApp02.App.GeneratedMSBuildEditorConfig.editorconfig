@@ -23,12 +23,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Order/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Order/OrderDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJEZXRhaWxzLmNzaHRtbA==
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/Classes/SEDC.PizzaApp02/SEDC.PizzaApp02.App/Views/Pizza/Details.cshtml]
