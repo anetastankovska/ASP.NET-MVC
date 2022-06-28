@@ -46,15 +46,22 @@ namespace BurgerApp.Helpers.OrderHelpers
 
         public static OrderViewModel MapToOrderViewModel(this Order order)
         {
-            
-            return new OrderViewModel()
+            var payment = order.PaymentMethod;
+            var kiro = new OrderViewModel()
             {
                 Id = order.Id,
-                //BurgersQty = order.Burgers,
+                FullName = order.FullName,
+                Hamburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")] : 0,
+                Cheeseburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")] : 0,
+                Chickenburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")] : 0,
+                Veggieburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")] : 0,
+                Veganburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")] : 0,
+                Crispyburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")] : 0,
                 Address = order.Address,
                 Location = order.Location,
                 PaymentMethod = order.PaymentMethod
             };
+            return kiro;
         }
 
         public static OrderListViewModel MapToOrderListViewModel(this Order order)

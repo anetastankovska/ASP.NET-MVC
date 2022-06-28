@@ -1,1 +1,85 @@
-﻿@model Order
+﻿@model OrderViewModel
+
+<h3>Please edit your order</h3>
+
+<div class="container mt-3">
+    <form asp-controller="Order" asp-action="Edit" method="post">
+        <h2>Order form</h2>
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="FullName"></label>
+            <br />
+            <input asp-for="FullName" value="@Model.FullName"/>
+            <span class="text-danger" asp-validation-for="FullName">*</span>
+        </div>
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="Address"></label>
+            <br />
+            <input asp-for="Address" value="@Model.Address"/>
+            <span class="text-danger" asp-validation-for="Address">*</span>
+        </div>
+
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="Location"></label>
+            <br />
+            <input asp-for="Location" />
+            <span class="text-danger" asp-validation-for="Location">*</span>
+        </div>
+        <br/>
+
+        <label class="h4">Select burger and quantity</label>
+        <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Hamburger">Hamburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Hamburger" value="@Model.Hamburger" type="number" min="0" max="10"/>
+        </div>
+
+        <div class="form-check mb-3 h6">
+            <label asp-for="Cheeseburger">Cheeseburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Cheeseburger" value="@Model.Cheeseburger" type="number" min="0" max="10"/>
+        </div>
+
+        <div class="form-check mb-3 h6">
+            <label asp-for="Chickenburger">Chickenburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Chickenburger" value="@Model.Chickenburger" type="number" min="0" max="10"/>
+        </div>
+
+        <div class="form-check mb-3 h6">
+            <label asp-for="Veggieburger">Veggie Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Veggieburger" value="@Model.Veggieburger" type="number" min="0" max="10"/>
+        </div>
+
+        <div class="form-check mb-3 h6">
+            <label asp-for="Veganburger">Vegan Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Veganburger" value="@Model.Veganburger"  type="number" min="0" max="10"/>
+        </div>
+
+        <div class="form-check mb-3 h6">
+            <label asp-for="Crispyburger">Crispy Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Crispyburger" value="@Model.Crispyburger" type="number" min="0" max="10"/>
+        </div>
+        <br />
+
+        <label class="h6" asp-for="PaymentMethod">Payment method:</label>
+        <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
+        </select>
+        <span class="text-danger" asp-validation-for="PaymentMethod">*</span>
+        <br/>
+        <br />
+
+        <button class="btn btn-primary" type="submit"> Submit </button>
+    </form>
+
+    <p class="text-danger" hidden>@ViewBag.ErrorMessage</p>
+</div>

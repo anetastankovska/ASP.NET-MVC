@@ -6,18 +6,21 @@
         <div class="mb-3 mt-3 h6">
             <label asp-for="FullName"></label>
             <br />
-            <input asp-for="FullName" />
+            <input asp-for="FullName"/>
+            <span class="text-danger" asp-validation-for="FullName">*</span>
         </div>
         <div class="mb-3 mt-3 h6">
             <label asp-for="Address"></label>
             <br />
             <input asp-for="Address" />
+            <span class="text-danger" asp-validation-for="Address">*</span>
         </div>
 
         <div class="mb-3 mt-3 h6">
             <label asp-for="Location"></label>
             <br />
             <input asp-for="Location" />
+            <span class="text-danger" asp-validation-for="Location">*</span>
         </div>
         <br/>
 
@@ -69,9 +72,12 @@
         <label class="h6" asp-for="PaymentMethod">Payment method:</label>
         <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
         </select>
+        <span class="text-danger" asp-validation-for="PaymentMethod">*</span>
         <br/>
         <br />
 
         <button class="btn btn-primary" type="submit"> Submit </button>
     </form>
+
+    <p class="text-danger" hidden>@ViewBag.ErrorMessage</p>
 </div>

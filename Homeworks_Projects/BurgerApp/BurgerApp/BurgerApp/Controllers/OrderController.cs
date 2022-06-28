@@ -45,9 +45,20 @@ namespace BurgerApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Order order)
+        public IActionResult Edit(OrderViewModel orderViewModel)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                Order updatedOrder = orderViewModel.MapToOrder();
+                var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == updatedOrder.Id);
+                orderFromDb.FullName = updatedOrder.FullName;
+                orderFromDb.Burgers = updatedOrder.Burgers;
+                orderFromDb.Address = updatedOrder.Address;
+                orderFromDb.Location = updatedOrder.Location;
+                orderFromDb.PaymentMethod = updatedOrder.PaymentMethod;
+                return RedirectToAction("Index");
+            }
+            return View(orderViewModel);
         }
 
         [HttpGet]
@@ -55,11 +66,16 @@ namespace BurgerApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var order = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+                var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+                if(orderFromDb == null)
+                {
+                    return NotFound();
+                }
+                var orderViewModel = orderFromDb.MapToOrderViewModel();
 
+                return View(orderViewModel);
             }
-            return View();
-
+            return NotFound();
         }
 
         public IActionResult Details(int? id)

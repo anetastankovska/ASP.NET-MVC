@@ -63,7 +63,6 @@ namespace SEDC.PizzaApp02.App.Controllers
                 StaticDB.Orders.Add(orderViewModel.MapToOrder());
                 return RedirectToAction("Index");
             }
-
             return View(orderViewModel);
         }
 
