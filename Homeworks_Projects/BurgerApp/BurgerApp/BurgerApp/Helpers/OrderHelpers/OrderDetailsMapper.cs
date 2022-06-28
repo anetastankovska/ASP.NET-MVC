@@ -11,7 +11,7 @@ namespace BurgerApp.Helpers.OrderHelpers
             try
             {
                 double totalPrice = 0;
-                totalPrice = order.Burgers.Sum(x => x.Price);
+                totalPrice = order.Burgers.Sum(x => x.Key.Price);
                 return totalPrice;
             }
             catch (Exception)

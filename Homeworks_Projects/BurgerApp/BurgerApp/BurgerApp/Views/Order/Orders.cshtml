@@ -4,27 +4,15 @@
 @{
     @foreach (var order in Model)
     {
-        <p>Order id: @order.OrderId</p>
         <p>User name: @order.UserName</p>
         <ul>Burgers orderded:</ul>
             @foreach (var burger in order.Burgers)
             {
-                <li>Burger name: @burger.Name</li>
+                <li>Burger name: @burger.Key.Name. Quantity: @burger.Value</li>
             }
         <p>Total price: @order.TotalPrice</p>
-        <p>Address: @order.Address</p>
-        <p>Location: @order.Location</p>
-        <p>Payment method: @order.PaymentMethod</p>
-        @if(order.Delivered == true)
-        {
-            <p>Delievered</p>
-        }
-        else
-        {
-            <p>Not Delievered</p>
-        }
-        <br />
-        <br />
+
+        <a class="btn btn-warning" asp-action="Details" asp-route-id="@order.OrderId">More details</a>
     }
 
 }

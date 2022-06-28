@@ -84,9 +84,45 @@ namespace BurgerApp
             //Burgers.Add(VeggieBurger);
             //Burgers.Add(Veganburger);
 
-            Orders.Add(new Order(1, "Aneta Stankovska", "str. 527 no. 1-32", false, new List<Burger>() { Burgers[4], Burgers[5] }, "Kisela Voda", PaymentMethod.Card));
-            Orders.Add(new Order(2, "Aleksandar Zivkovic", "str. Sava Kovacevikj no. 10", false, new List<Burger>() { Burgers[0], Burgers[1] }, "Kisela Voda", PaymentMethod.Cash));
-            Orders.Add(new Order(3, "Stefan Ivanovski", "str. Boris Trakovski no. 150", false, new List<Burger>() { Burgers[3], Burgers[1], Burgers[2] }, "Kisela Voda", PaymentMethod.Card));
+
+            Orders.Add(new Order(1, 
+                "Aneta Stankovska", 
+                "str. 527 no. 1-32", 
+                false, 
+                new Dictionary<Burger, int>()
+                {
+                    { Burgers[3], 2 },
+                    { Burgers[4], 3 },
+                    { Burgers[5], 1 },
+                }, 
+                "Kisela Voda", 
+                PaymentMethod.Card));
+
+            Orders.Add(new Order(2, 
+                "Aleksandar Zivkovic", 
+                "str. Sava Kovacevikj no. 10", 
+                false,
+                new Dictionary<Burger, int>()
+                {
+                    { Burgers[0], 1 },
+                    { Burgers[1], 3 },
+                    { Burgers[3], 1 },
+                },
+                "Centar", 
+                PaymentMethod.Cash));
+
+            Orders.Add(new Order(3, 
+                "Stefan Ivanovski", 
+                "str. Boris Trajkovski no. 150", 
+                false,
+                new Dictionary<Burger, int>()
+                {
+                    { Burgers[3], 2 },
+                    { Burgers[1], 1 },
+                    { Burgers[2], 3 },
+                },
+                "Kisela Voda", 
+                PaymentMethod.Card));
 
         }
 

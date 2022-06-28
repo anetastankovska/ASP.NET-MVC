@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TumJIvO0o0yCFb+JAbpeMM2j60XtN6dR5n5ZH8+U/dY=",
+  "Hash": "0TD6usXOMvWZjyNITj6uiBeQ+karBc3foO0bVa5ivbg=",
   "Source": "BurgerApp",
   "BasePath": "_content/BurgerApp",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BurgerApp.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\css\\single-burger.png",
+      "SourceId": "BurgerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\",
+      "BasePath": "_content/BurgerApp",
+      "RelativePath": "css/single-burger.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\single-burger.png"
+    },
+    {
       "Identity": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\css\\site.css",
       "SourceId": "BurgerApp",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\css\\three-burgers.png",
+      "SourceId": "BurgerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\",
+      "BasePath": "_content/BurgerApp",
+      "RelativePath": "css/three-burgers.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\three-burgers.png"
     },
     {
       "Identity": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\Homeworks_Projects\\BurgerApp\\BurgerApp\\BurgerApp\\wwwroot\\favicon.ico",

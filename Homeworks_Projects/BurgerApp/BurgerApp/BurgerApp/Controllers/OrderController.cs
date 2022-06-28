@@ -27,20 +27,21 @@ namespace BurgerApp.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            Order order = new Order();
-            return View(order);
+            OrderViewModel orderViewModel = new OrderViewModel();
+            return View(orderViewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(Order order)
+        public IActionResult Create(OrderViewModel orderViewModel)
         {
+            
             if (ModelState.IsValid)
             {
-                order.Id = StaticDB.Orders.Count() + 1;
-                StaticDB.Orders.Add(order);
-                return RedirectToAction("Orders");
+                orderViewModel.Id = StaticDB.Orders.Count() + 1;
+                StaticDB.Orders.Add(orderViewModel.MapToOrder());
+                return RedirectToAction("Index");
             }
-            return View();
+            return View(orderViewModel);
         }
 
         [HttpPost]
@@ -63,10 +64,17 @@ namespace BurgerApp.Controllers
 
         public IActionResult Details(int? id)
         {
-            //DetailsViewModel detailsViewModel = order.MapToOrderDetailsViewModel();
+            if (id == null)
+            {
+                return new EmptyResult();
+            }
+            var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+            if (orderFromDb == null)
+            {
+                return NotFound();
+            }
 
-            ViewData["Title"] = "Orders details";
-
+            DetailsViewModel detailsViewModel = orderFromDb.MapToOrderDetailsViewModel();
             return View(detailsViewModel);
         }
     }

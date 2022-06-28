@@ -1,61 +1,77 @@
-﻿@model Order
-<form asp-controller="Order" asp-action="Create" method="post">
-    <label asp-for="FullName"></label>
-    <input asp-for="FullName" />
-    <br/>
+﻿@model OrderViewModel
 
-    <label asp-for="Address"></label>
-    <input asp-for="Address" />
-    <br />
+<div class="container mt-3">
+    <form asp-controller="Order" asp-action="Create" method="post">
+        <h2>Order form</h2>
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="FullName"></label>
+            <br />
+            <input asp-for="FullName" />
+        </div>
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="Address"></label>
+            <br />
+            <input asp-for="Address" />
+        </div>
 
-    <label asp-for="Location"></label>
-    <input asp-for="Location" />
-    <br/>
-    <br />
-    <label asp-for="Burgers"></label>
-    <br />
-    <input type="checkbox" name="Hamburger" value="Hamburger">
-    <label for="Hamburger">Hamburger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
+        <div class="mb-3 mt-3 h6">
+            <label asp-for="Location"></label>
+            <br />
+            <input asp-for="Location" />
+        </div>
+        <br/>
 
-    <input type="checkbox" name="Cheeseburger" value="Cheeseburger">
-    <label for="CheeseBurger">Cheeseburger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
+        <label class="h4">Select burger and quantity</label>
+        <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Hamburger">Hamburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Hamburger" value="0" type="number" min="0" max="10"/>
+        </div>
 
-    <input type="checkbox" name="Chickenburger" value="Chickenburger">
-    <label for="Chickenburger">Chickenburger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Cheeseburger">Cheeseburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Cheeseburger" value="0" type="number" min="0" max="10"/>
+        </div>
 
-    <input type="checkbox" name="Veggieburger" value="Veggieburger">
-    <label for="Veggieburger">Veggie Burger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Chickenburger">Chickenburger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Chickenburger" value="0" type="number" min="0" max="10"/>
+        </div>
 
-    <input type="checkbox" name="Vegan Burger" value="Vegan Burger">
-    <label for="Vegan Burger">Vegan Burger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Veggieburger">Veggie Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Veggieburger" value="0" type="number" min="0" max="10"/>
+        </div>
 
-    <input type="checkbox" name="Crispy Burger" value="Crispy Burger">
-    <label for="Crispy Burger">Crispy Burger</label> 
-    <label for="Quantity">Quantity</label>
-    <input name="Quantity" value="0" id="Quantity" type="number" min="0" max="10"/>
-    <br />
-    <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Veganburger">Vegan Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Veganburger" value="0"  type="number" min="0" max="10"/>
+        </div>
 
-    <label asp-for="PaymentMethod">Payment method:</label>
-    <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
-    </select>
-    <br/>
-    <br />
+        <div class="form-check mb-3 h6">
+            <label asp-for="Crispyburger">Crispy Burger</label> 
+            <br />
+            <label for="Quantity">Quantity</label>
+            <input asp-for="Crispyburger" value="0"  type="number" min="0" max="10"/>
+        </div>
+        <br />
 
-    <button type="submit"> Submit </button>
-</form>
+        <label class="h6" asp-for="PaymentMethod">Payment method:</label>
+        <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
+        </select>
+        <br/>
+        <br />
+
+        <button class="btn btn-primary" type="submit"> Submit </button>
+    </form>
+</div>

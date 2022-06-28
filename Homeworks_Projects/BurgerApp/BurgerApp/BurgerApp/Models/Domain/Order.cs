@@ -8,12 +8,12 @@ namespace BurgerApp.Models.Domain
         public string FullName { get; set; }
         public string Address { get; set; }
         public bool IsDelivered { get; set; } = false;
-        public List<Burger> Burgers { get; set; } = new List<Burger>();
+        public Dictionary<Burger, int> Burgers { get; set; } = new Dictionary<Burger, int>();
         public string Location { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
 
         public Order() { }
-        public Order(int id, string fullName, string address, bool isDelivered, List<Burger> burgers, string location, PaymentMethod paymentMethod)
+        public Order(int id, string fullName, string address, bool isDelivered, Dictionary<Burger, int> burgers, string location, PaymentMethod paymentMethod)
         {
             Id = id;
             FullName = fullName;

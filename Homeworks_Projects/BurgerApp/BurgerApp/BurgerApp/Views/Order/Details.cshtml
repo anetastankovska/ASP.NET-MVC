@@ -1,1 +1,21 @@
 ﻿@model DetailsViewModel
+
+@{
+    <p>Order id: @Model.OrderId</p>
+    <p>User name: @Model.UserName</p>
+    <ul>Burgers orderded:</ul>
+        @foreach (var burger in Model.Burgers)
+        {
+            <li>Burger name: @burger.Key.Name. Quantity: @burger.Value</li>
+        }
+    <p>Total price: @Model.TotalPrice</p>
+    <p>Address: @Model.Address</p>
+    <p>Location: @Model.Location</p>
+    <p>Payment method: @Model.PaymentMethod</p>
+    <p>
+    @(Model.Delivered ? "Delievered" : "Not delievered")</p>
+    <br />
+    <br />
+    <a class="btn btn-warning" asp-action="Orders">Back to orders</a>
+    <a class="btn btn-warning" asp-action="Index" asp-controller="Home">Back to Home Page</a>
+}

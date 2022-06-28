@@ -7,7 +7,7 @@ namespace BurgerApp.Models.ViewModels.OrderViewModels
     {
         public int OrderId { get; set; }
         public string UserName { get; set; }
-        public List<Burger> Burgers { get; set; }
+        public Dictionary<Burger, int> Burgers { get; set; }
         public double TotalPrice { get; set; }
         public string Address { get; set; }
         public string Location { get; set; }
