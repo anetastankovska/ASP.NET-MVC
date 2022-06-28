@@ -72,6 +72,7 @@
         <br />
 
         <label class="h6" asp-for="PaymentMethod">Payment method:</label>
+        @*<select asp-for="PaymentMethod" asp-items="Model.PaymentMethods">*@
         <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()">
         </select>
         <span class="text-danger" asp-validation-for="PaymentMethod">*</span>

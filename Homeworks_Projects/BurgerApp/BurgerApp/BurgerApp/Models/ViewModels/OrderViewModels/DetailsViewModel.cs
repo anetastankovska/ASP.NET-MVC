@@ -14,7 +14,5 @@ namespace BurgerApp.Models.ViewModels.OrderViewModels
         public PaymentMethod PaymentMethod { get; set; }
         public bool Delivered { get; set; }
         
-        
-
     }
 }

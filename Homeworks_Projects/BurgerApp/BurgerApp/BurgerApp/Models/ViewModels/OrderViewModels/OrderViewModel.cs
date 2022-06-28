@@ -1,5 +1,6 @@
 ﻿using BurgerApp.Models.Domain;
 using BurgerApp.Models.Enums;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace BurgerApp.Models.ViewModels.OrderViewModels
@@ -25,9 +26,15 @@ namespace BurgerApp.Models.ViewModels.OrderViewModels
         [Required(ErrorMessage = "Please enter a valid location")]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Please enter a valid cocation")]
         public string Location { get; set; }
+
         [Required(ErrorMessage = "Please select payment method")]
-        [StringLength(50, MinimumLength = 5, ErrorMessage = "Please select a payment method")]
         public PaymentMethod PaymentMethod { get; set; }
 
+        //public List<SelectListItem> PaymentMethods { get; set; } = new List<SelectListItem>()
+        //{
+        //    new SelectListItem() { Text = "Cash", Value = "Cash" },
+        //    new SelectListItem() { Text = "Card", Value = "Card" }
+
+        //};
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BurgerApp.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace BurgerApp.Models.Domain
 {
