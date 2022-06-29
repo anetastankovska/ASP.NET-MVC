@@ -66,6 +66,7 @@ namespace SEDC.PizzaApp02.App.Controllers
             return View(orderViewModel);
         }
 
+        [HttpGet]
         public IActionResult Delete(int? id)
         {
             if(id == null)
@@ -93,6 +94,39 @@ namespace SEDC.PizzaApp02.App.Controllers
             }
             StaticDB.Orders.Remove(orderFromDb);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Edit(OrderViewModel orderViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Order updatedOrder = orderViewModel.MapToOrder();
+                var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == updatedOrder.Id);
+                orderFromDb.User.FirstName = updatedOrder.User.FirstName;
+                orderFromDb.User.FirstName = updatedOrder.User.FirstName;
+
+                orderFromDb.PaymentMethod = updatedOrder.PaymentMethod;
+                return RedirectToAction("Index");
+            }
+            return View(orderViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var orderFromDb = StaticDB.Orders.SingleOrDefault(x => x.Id == id);
+                if (orderFromDb == null)
+                {
+                    return NotFound();
+                }
+                var orderViewModel = orderFromDb.MapToOrderDetailsViewModel();
+
+                return View(orderViewModel);
+            }
+            return NotFound();
         }
     }
 
