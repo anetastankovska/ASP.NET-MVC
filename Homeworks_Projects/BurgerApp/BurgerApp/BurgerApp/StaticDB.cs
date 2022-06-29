@@ -99,7 +99,7 @@ namespace BurgerApp
                 PaymentMethod.Card));
 
             Orders.Add(new Order(2, 
-                "Aleksandar Zivkovic", 
+                "Kristijan Karanfilovski", 
                 "str. Sava Kovacevikj no. 10", 
                 false,
                 new Dictionary<Burger, int>()
@@ -112,7 +112,7 @@ namespace BurgerApp
                 PaymentMethod.Cash));
 
             Orders.Add(new Order(3, 
-                "Stefan Ivanovski", 
+                "Ilija Mitev", 
                 "str. Boris Trajkovski no. 150", 
                 false,
                 new Dictionary<Burger, int>()

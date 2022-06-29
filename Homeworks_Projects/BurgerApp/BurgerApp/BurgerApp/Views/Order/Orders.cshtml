@@ -4,16 +4,18 @@
 @{
     @foreach (var order in Model)
     {
-        <p>User name: @order.UserName</p>
-        <ul>Burgers orderded:</ul>
+        <p style="font-weight:700">User name: @order.UserName</p>
+        <ul style="font-weight:600">Burgers orderded:</ul>
             @foreach (var burger in order.Burgers)
             {
                 <li>Burger name: @burger.Key.Name. Quantity: @burger.Value</li>
             }
-        <p>Total price: @order.TotalPrice</p>
+        <p style="font-weight:600">Total price: @order.TotalPrice</p>
 
         <a class="btn btn-warning" asp-action="Details" asp-route-id="@order.OrderId">More details</a>
         <a class="btn btn-warning" asp-action="Edit" asp-route-id="@order.OrderId">Edit order</a>
+        <br />
+        <hr />
     }
 
 }
