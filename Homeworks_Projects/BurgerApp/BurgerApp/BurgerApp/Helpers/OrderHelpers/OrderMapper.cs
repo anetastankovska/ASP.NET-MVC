@@ -8,29 +8,29 @@ namespace BurgerApp.Helpers.OrderHelpers
         public static Order MapToOrder(this OrderViewModel orderViewModel)
         {
             Dictionary<Burger, int> burgers = new Dictionary<Burger, int>();
-            if (orderViewModel.Hamburger > 0)
+            if (orderViewModel.HamburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[0], orderViewModel.Hamburger);
+                burgers.Add(StaticDB.Burgers[0], orderViewModel.HamburgerCount);
             }
-            if (orderViewModel.Cheeseburger > 0)
+            if (orderViewModel.CheeseburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[1], orderViewModel.Cheeseburger);
+                burgers.Add(StaticDB.Burgers[1], orderViewModel.CheeseburgerCount);
             }
-            if (orderViewModel.Chickenburger > 0)
+            if (orderViewModel.ChickenburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[2], orderViewModel.Chickenburger);
+                burgers.Add(StaticDB.Burgers[2], orderViewModel.ChickenburgerCount);
             }
-            if (orderViewModel.Veggieburger > 0)
+            if (orderViewModel.VeggieburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[3], orderViewModel.Veggieburger);
+                burgers.Add(StaticDB.Burgers[3], orderViewModel.VeggieburgerCount);
             }
-            if (orderViewModel.Veganburger > 0)
+            if (orderViewModel.VeganburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[4], orderViewModel.Veganburger);
+                burgers.Add(StaticDB.Burgers[4], orderViewModel.VeganburgerCount);
             }
-            if (orderViewModel.Crispyburger > 0)
+            if (orderViewModel.CrispyburgerCount > 0)
             {
-                burgers.Add(StaticDB.Burgers[5], orderViewModel.Crispyburger);
+                burgers.Add(StaticDB.Burgers[5], orderViewModel.CrispyburgerCount);
             }
             return new Order()
             {
@@ -51,12 +51,12 @@ namespace BurgerApp.Helpers.OrderHelpers
             {
                 Id = order.Id,
                 FullName = order.FullName,
-                Hamburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")] : 0,
-                Cheeseburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")] : 0,
-                Chickenburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")] : 0,
-                Veggieburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")] : 0,
-                Veganburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")] : 0,
-                Crispyburger = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")] : 0,
+                HamburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Hamburger")] : 0,
+                CheeseburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Cheeseburger")] : 0,
+                ChickenburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Chickenburger")] : 0,
+                VeggieburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Veggieburger")] : 0,
+                VeganburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Vegan Burger")] : 0,
+                CrispyburgerCount = order.Burgers.ContainsKey(StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")) ? order.Burgers[StaticDB.Burgers.FirstOrDefault(x => x.Name == "Crispy Burger")] : 0,
                 Address = order.Address,
                 Location = order.Location,
                 PaymentMethod = order.PaymentMethod

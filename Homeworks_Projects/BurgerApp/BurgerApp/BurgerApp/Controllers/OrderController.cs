@@ -37,11 +37,25 @@ namespace BurgerApp.Controllers
             
             if (ModelState.IsValid)
             {
-                orderViewModel.Id = StaticDB.Orders.Count() + 1;
+                var typed = orderViewModel.GetType().GetProperties().Where(x => x.PropertyType == typeof(int)).Skip(1).ToList();
+                var sum = typed.Select(x => (int)x.GetValue(orderViewModel)).Sum();
+                if (sum <= 0)
+                {
+                    return View(orderViewModel);
+                }
+                    orderViewModel.Id = StaticDB.Orders.Count() + 1;
                 StaticDB.Orders.Add(orderViewModel.MapToOrder());
                 return RedirectToAction("Index");
             }
             return View(orderViewModel);
+
+            //var typed = orderViewModel.GetType().GetProperties().Where(x => x.PropertyType == typeof(int)).Skip(1).ToList();
+            //var sum = typed.Select(x => (int)x.GetValue(orderViewModel)).Sum();
+        //    if (sum > 0)
+        //    {
+        //        return View(orderViewModel);
+        //    }
+        //    return NotFound();
         }
 
         [HttpPost]

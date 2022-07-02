@@ -13,12 +13,12 @@ namespace BurgerApp.Models.ViewModels.OrderViewModels
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Please enter a valid full name")]
         public string FullName { get; set; }
         //public Dictionary<Burger, int> BurgersQty { get; set; } = new Dictionary<Burger, int>();
-        public int Hamburger { get; set; }
-        public int Cheeseburger { get; set; }
-        public int Chickenburger { get; set; }
-        public int Veggieburger { get; set; }
-        public int Veganburger { get; set; }
-        public int Crispyburger { get; set; }
+        public int HamburgerCount { get; set; }
+        public int CheeseburgerCount { get; set; }
+        public int ChickenburgerCount { get; set; }
+        public int VeggieburgerCount { get; set; }
+        public int VeganburgerCount { get; set; }
+        public int CrispyburgerCount { get; set; }
 
         [Required(ErrorMessage = "Please enter a valid address")]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Please enter a valid address")]
