@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "SEDC.PizzaApp.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SEDC.PizzaApp.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEDC.PizzaApp.Domain.dll": {}
+        }
+      },
+      "SEDC.PizzaApp.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SEDC.PizzaApp.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SEDC.PizzaApp.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SEDC.PizzaApp.ViewModels.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SEDC.PizzaApp.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SEDC.PizzaApp.Domain/SEDC.PizzaApp.Domain.csproj",
+      "msbuildProject": "../SEDC.PizzaApp.Domain/SEDC.PizzaApp.Domain.csproj"
+    },
+    "SEDC.PizzaApp.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../SEDC.PizzaApp.ViewModels/SEDC.PizzaApp.ViewModels.csproj",
+      "msbuildProject": "../SEDC.PizzaApp.ViewModels/SEDC.PizzaApp.ViewModels.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "SEDC.PizzaApp.Domain >= 1.0.0",
+      "SEDC.PizzaApp.ViewModels >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Aneta\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\SEDC.PizzaApp.Refactored\\SEDC.PizzaApp\\SEDC.PizzaApp.Domain\\SEDC.PizzaApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\SEDC.PizzaApp.Refactored\\SEDC.PizzaApp\\SEDC.PizzaApp.Domain\\SEDC.PizzaApp.Domain.csproj"
+            },
+            "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\SEDC.PizzaApp.Refactored\\SEDC.PizzaApp\\SEDC.PizzaApp.ViewModels\\SEDC.PizzaApp.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\Aneta\\Desktop\\SEDC\\ASP.NET-MVC\\SEDC.PizzaApp.Refactored\\SEDC.PizzaApp\\SEDC.PizzaApp.ViewModels\\SEDC.PizzaApp.ViewModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

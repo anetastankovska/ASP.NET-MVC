@@ -42,7 +42,7 @@ namespace SEDC.PizzaApp.DataAccess.Data
                 {
                     Id = 2,
                     Name = "Pepperoni",
-                    IsOnPromotion = false,
+                    IsOnPromotion = true,
                     PizzaOrders = new List<PizzaOrder>
                     {
                     }
