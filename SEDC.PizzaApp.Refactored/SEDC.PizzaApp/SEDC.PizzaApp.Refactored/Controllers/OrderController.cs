@@ -4,7 +4,11 @@ using SEDC.PizzaApp.Services.Services.Interfaces;
 using SEDC.PizzaApp.ViewModels.OrderViewModels;
 
 namespace SEDC.PizzaApp.Refactored.Controllers
-{
+{//Connect MVC Application with Database using EntityFramework
+ //1. Implement DbContext class with all db sets and configurations
+ //2. Add the DbContezt in Program.cs class
+ //3. Inject the DbContext in the repositories and use it
+
     public class OrderController : Controller
     {
         private readonly IOrderService _orderService;

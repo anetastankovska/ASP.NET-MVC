@@ -11,6 +11,12 @@ namespace SEDC.PizzaApp.DataAccess.Repositories
 {
     public class OrderRepository : IRepository<Order>
     {
+        private readonly PizzaAppDbContext _context;
+        public OrderRepository(PizzaAppDbContext context)
+        {
+            _context = context;
+        }
+
         public List<Order> GetAll()
         {
             return StaticDb.Orders;

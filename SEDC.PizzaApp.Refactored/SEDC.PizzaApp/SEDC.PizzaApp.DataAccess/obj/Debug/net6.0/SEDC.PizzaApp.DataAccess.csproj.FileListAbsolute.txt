@@ -13,3 +13,5 @@ C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\S
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.DataAccess\obj\Debug\net6.0\refint\SEDC.PizzaApp.DataAccess.dll
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.DataAccess\obj\Debug\net6.0\SEDC.PizzaApp.DataAccess.pdb
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.DataAccess\obj\Debug\net6.0\ref\SEDC.PizzaApp.DataAccess.dll
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.DataAccess\bin\Debug\net6.0\SEDC.PizzaApp.DataAccess.runtimeconfig.json
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.DataAccess\obj\Debug\net6.0\SEDC.PizzaApp.DataAccess.genruntimeconfig.cache

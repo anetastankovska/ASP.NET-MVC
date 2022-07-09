@@ -10,3 +10,5 @@ C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\S
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.Domain\obj\Debug\net6.0\refint\SEDC.PizzaApp.Domain.dll
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.Domain\obj\Debug\net6.0\SEDC.PizzaApp.Domain.pdb
 C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.Domain\obj\Debug\net6.0\ref\SEDC.PizzaApp.Domain.dll
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.Domain\bin\Debug\net6.0\SEDC.PizzaApp.Domain.runtimeconfig.json
+C:\Users\Aneta\Desktop\SEDC\ASP.NET-MVC\SEDC.PizzaApp.Refactored\SEDC.PizzaApp\SEDC.PizzaApp.Domain\obj\Debug\net6.0\SEDC.PizzaApp.Domain.genruntimeconfig.cache
