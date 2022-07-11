@@ -11,6 +11,11 @@ namespace SEDC.PizzaApp.DataAccess.Repositories
 {
     public class UserRepository : IRepository<User>
     {
+        private readonly PizzaAppDbContext _context;
+        public UserRepository(PizzaAppDbContext context)
+        {
+            _context = context;
+        }
         public void Delete(int id)
         {
             throw new NotImplementedException();

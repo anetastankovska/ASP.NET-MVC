@@ -29,7 +29,8 @@ namespace SEDC.PizzaApp.Mappers.Extensions
                 IsDelivered = orderViewModel.IsDelivered,
                 PaymentMethod = orderViewModel.PaymentMethod,
                 PizzaOrders = new List<PizzaOrder>(),
-                UserId = orderViewModel.UserId
+                UserId = orderViewModel.UserId,
+                Location = orderViewModel.Location
             };
         }
     }
