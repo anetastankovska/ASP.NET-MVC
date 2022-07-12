@@ -1,9 +1,5 @@
-using SEDC.PizzaApp.DataAccess.Repositories;
-using SEDC.PizzaApp.DataAccess.Repositories.Interfaces;
-using SEDC.PizzaApp.Domain.Models;
+
 using SEDC.PizzaApp.Helpers;
-using SEDC.PizzaApp.Services.Services;
-using SEDC.PizzaApp.Services.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +9,11 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.InjectServices();
 builder.Services.InjectRepositories();
 
-
 string connString = builder.Configuration.GetConnectionString("PizzaAppDbConnection");
 builder.Services.InjectDbContext(connString);
+
+
+
 
 var app = builder.Build();
 

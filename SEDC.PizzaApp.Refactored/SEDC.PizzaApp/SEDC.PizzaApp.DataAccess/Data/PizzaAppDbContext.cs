@@ -20,11 +20,12 @@ namespace SEDC.PizzaApp.DataAccess.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Pizza> Pizzas { get; set; }
 
-        protected override void  OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Defining relationships
-            //Check Fluent Api Entity Framework!!!
 
+            // Define relations in external method
             RelationsResolver.AddOrderRelations(modelBuilder);
 
             modelBuilder.Entity<Pizza>()
@@ -37,8 +38,10 @@ namespace SEDC.PizzaApp.DataAccess.Data
                 .WithOne(x => x.User)
                 .HasForeignKey(x => x.UserId);
 
-            //Data seed
+
+            // Data seed by using external method
             DataSeed.InsertDataInDb(modelBuilder);
         }
+
     }
 }

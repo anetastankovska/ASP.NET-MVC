@@ -17,6 +17,5 @@ namespace SEDC.PizzaApp.DataAccess.Relations
                 .WithOne(x => x.Order)
                 .HasForeignKey(x => x.OrderId);
         }
-        
     }
 }

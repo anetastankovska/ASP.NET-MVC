@@ -1,13 +1,8 @@
-﻿
-using SEDC.PizzaApp.DataAccess.Repositories.Interfaces;
+﻿using SEDC.PizzaApp.DataAccess.Repositories.Interfaces;
+using SEDC.PizzaApp.Domain.Models;
 using SEDC.PizzaApp.Mappers.Extensions;
 using SEDC.PizzaApp.Services.Services.Interfaces;
 using SEDC.PizzaApp.ViewModels.PizzaViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SEDC.PizzaApp.Services.Services
 {
@@ -18,10 +13,19 @@ namespace SEDC.PizzaApp.Services.Services
         {
             _pizzaRepository = pizzaRepository;
         }
-    
+
         public List<PizzaViewModel> GetPizzasOnPromotion()
         {
-            return _pizzaRepository.GetOnPromotion().Select(x => x.MapToPizzaViewModel()).ToList();
+            return _pizzaRepository
+                    .GetOnPromotion()
+                    .Select(x => x.MapToPizzaViewModel()).ToList();
         }
+        public List<PizzaViewModel> GetPizzasForDropdown()
+        {
+            List<Pizza> pizzasDb = _pizzaRepository.GetAll();
+
+            return pizzasDb.Select(x => x.MapToPizzaViewModel()).ToList();
+        }
+
     }
 }

@@ -19,12 +19,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/AddPizza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkUGl6emEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Shared/ExceptionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEV4Y2VwdGlvblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Aneta/Desktop/SEDC/ASP.NET-MVC/SEDC.PizzaApp.Refactored/SEDC.PizzaApp/SEDC.PizzaApp.Refactored/Views/Shared/_ValidationScriptsPartial.cshtml]
