@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="HomeViewModels\" />
+    <Folder Include="BurgerViewModels\" />
+    <Folder Include="UserViewModels\" />
+    <Folder Include="OrderViewModels\" />
+  </ItemGroup>
+
 </Project>
